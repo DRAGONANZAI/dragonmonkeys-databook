@@ -1,0 +1,110 @@
+// ======================================
+// Dragon Monkeys DATA BOOK
+// script.js
+// ======================================
+
+console.log("Dragon Monkeys DATA BOOK");
+
+// --------------------
+// 現在日時表示
+// --------------------
+function updateClock() {
+
+    const clock = document.getElementById("clock");
+
+    if (!clock) return;
+
+    const now = new Date();
+
+    clock.innerHTML =
+        now.getFullYear() + "/" +
+        ("0"+(now.getMonth()+1)).slice(-2) + "/" +
+        ("0"+now.getDate()).slice(-2) + " " +
+        ("0"+now.getHours()).slice(-2) + ":" +
+        ("0"+now.getMinutes()).slice(-2);
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+
+// --------------------
+// 選手検索
+// --------------------
+
+function searchPlayer(){
+
+    const input =
+    document.getElementById("search");
+
+    if(!input) return;
+
+    const filter =
+    input.value.toUpperCase();
+
+    const cards =
+    document.getElementsByClassName("card");
+
+    for(let i=0;i<cards.length;i++){
+
+        const txt =
+        cards[i].innerText.toUpperCase();
+
+        if(txt.indexOf(filter)>-1){
+
+            cards[i].style.display="block";
+
+        }else{
+
+            cards[i].style.display="none";
+
+        }
+
+    }
+
+}
+
+
+// --------------------
+// テーブル並び替え
+// --------------------
+
+function sortTable(column){
+
+    const table =
+    document.querySelector("table");
+
+    if(!table) return;
+
+    let rows =
+    Array.from(table.rows).slice(1);
+
+    rows.sort(function(a,b){
+
+        return Number(
+            b.cells[column].innerHTML.replace("%","")
+        )-
+
+        Number(
+            a.cells[column].innerHTML.replace("%","")
+        );
+
+    });
+
+    rows.forEach(row=>table.appendChild(row));
+
+}
+
+
+
+// --------------------
+// 勝率ランキング
+// --------------------
+
+window.onload=function(){
+
+    sortTable(4);
+
+}
