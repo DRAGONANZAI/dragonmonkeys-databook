@@ -1,91 +1,93 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>Players | Dragon Monkeys DATA BOOK</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Players | Dragon Monkeys DATA BOOK</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
 </head>
+
 <body>
 
 <header>
-    <h1>👤 PLAYERS</h1>
-    <p>Dragon Monkeys League Member</p>
+<h1>👤 PLAYERS</h1>
+<p>Dragon Monkeys DATA BOOK</p>
 </header>
 
 <nav>
-    <a href="index.html">HOME</a>
-    <a href="players.html">PLAYERS</a>
-    <a href="stats.html">STATS</a>
-    <a href="matches.html">MATCHES</a>
+<a href="index.html">HOME</a>
+<a href="players.html">PLAYERS</a>
+<a href="stats.html">STATS</a>
+<a href="matches.html">MATCHES</a>
 </nav>
 
 <section class="hero">
-    <input
-id="search"
+
+<h2>選手一覧</h2>
+
+<input
 type="text"
+id="search"
 placeholder="選手検索..."
-onkeyup="searchPlayer()"
-style="
-width:300px;
-max-width:90%;
-padding:12px;
-display:block;
-margin:20px auto;
-border-radius:10px;
-border:none;
-font-size:16px;
-">
-    <h2>選手一覧</h2>
-    <p>2026 Season 登録メンバー</p>
+onkeyup="searchPlayer()">
+
 </section>
 
-<div class="cards">
+<div id="playerList" class="cards">
 
-    <div class="card">
-        <h3>安西</h3>
-        <p>Captain</p>
-    </div>
+<div class="card">
+<h3>安西</h3>
+<p>19勝 7敗</p>
+<p>勝率 73.1%</p>
+</div>
 
-    <div class="card">
-        <h3>中西</h3>
-        <p>Player</p>
-    </div>
+<div class="card">
+<h3>中西</h3>
+<p>14勝 11敗</p>
+<p>勝率 56.0%</p>
+</div>
 
-    <div class="card">
-        <h3>山下</h3>
-        <p>Player</p>
-    </div>
+<div class="card">
+<h3>山下</h3>
+<p>12勝 8敗</p>
+<p>勝率 60.0%</p>
+</div>
 
-    <div class="card">
-        <h3>松場</h3>
-        <p>Player</p>
-    </div>
+<div class="card">
+<h3>松場</h3>
+<p>8勝 6敗</p>
+<p>勝率 57.1%</p>
+</div>
 
-    <div class="card">
-        <h3>野上</h3>
-        <p>Player</p>
-    </div>
+<div class="card">
+<h3>野上</h3>
+<p>6勝 9敗</p>
+<p>勝率 40.0%</p>
+</div>
 
-    <div class="card">
-        <h3>鎌田</h3>
-        <p>Player</p>
-    </div>
+<div class="card">
+<h3>鎌田</h3>
+<p>10勝 8敗</p>
+<p>勝率 55.6%</p>
+</div>
 
-    <div class="card">
-        <h3>田渕</h3>
-        <p>Player</p>
-    </div>
+<div class="card">
+<h3>田渕</h3>
+<p>3勝 5敗</p>
+<p>勝率 37.5%</p>
+</div>
 
-    <div class="card">
-        <h3>久保</h3>
-        <p>Player</p>
-    </div>
+<div class="card">
+<h3>久保</h3>
+<p>10勝 2敗</p>
+<p>勝率 83.3%</p>
+</div>
 
 </div>
 
 <footer>
-    <p>© 2026 Dragon Monkeys DATA BOOK</p>
+<p>© 2026 Dragon Monkeys DATA BOOK</p>
 </footer>
 
 </body>
